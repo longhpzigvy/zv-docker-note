@@ -67,6 +67,10 @@ docker [OPTION] run image_id/image_name
 # example
 # docker run --name docker-tut-con docker-tut -it -d
 ```
+- Stop a container without removing it
+```
+docker stop [OPTION] container_name/container_id
+```
 
 ### Docker compose
 - Run all services defined within the docker-compose.yml
@@ -83,7 +87,9 @@ docker-compose [OPTION] up
 - [docker container](https://docs.docker.com/engine/reference/commandline/images/)
 - [docker run](https://docs.docker.com/engine/reference/commandline/run/)
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+- [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
 - [docker-compose](https://docs.docker.com/compose/reference/)
+- (More commands](https://docs.docker.com/engine/reference/commandline/)
 
 ## Dockerfile
 ```Dockerfile
