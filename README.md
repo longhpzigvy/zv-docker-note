@@ -11,19 +11,26 @@ Head to [Docker installation guide](https://docs.docker.com/install/overview/) f
 ### Images
 - List current active images
 ```
-docker images ls
+docker image ls
+# or
+docker images
 ```
 - List all images
 ```
-docker images ls -a
+docker image ls -a
+# or
+docker images -a
 ```
 - Remove an image
 ```
-docker images rm image_name/image_id    # require all containers must be stopped
-docker images rm image_name/image_id -f # force delete, all container will be removed
+docker image rm image_name/image_id    # require all containers must be stopped
+docker image rm image_name/image_id -f # force delete, all container will be removed
+
+# or
+docker rmi image_name/image_id
 
 # example
-# docker images rm 59ab3f4
+# docker image rm 59ab3f4
 ```
 - Build/Rebuild an image from Dockerfile
 ```
@@ -48,6 +55,9 @@ docker container ls -a
 - Remove a container
 ```
 docker container rm container_name/container_id # you may want to stop the container first
+
+# or
+docker rm container_name/container_id
 
 # example
 # docker container rm 59ab3f4
@@ -83,8 +93,9 @@ docker-compose [OPTION] up
 ```
 
 ### More information
-- [docker image](https://docs.docker.com/engine/reference/commandline/container/)
-- [docker container](https://docs.docker.com/engine/reference/commandline/images/)
+- [docker image](https://docs.docker.com/engine/reference/commandline/image/)
+- [docker images](https://docs.docker.com/engine/reference/commandline/images/)
+- [docker container](https://docs.docker.com/engine/reference/commandline/container/)
 - [docker run](https://docs.docker.com/engine/reference/commandline/run/)
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)
 - [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
