@@ -89,7 +89,7 @@ docker-compose [OPTION] up
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)
 - [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
 - [docker-compose](https://docs.docker.com/compose/reference/)
-- (More commands](https://docs.docker.com/engine/reference/commandline/)
+- [More commands](https://docs.docker.com/engine/reference/commandline/)
 
 ## Dockerfile
 ```Dockerfile
