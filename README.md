@@ -1,12 +1,7 @@
 # Zigvy Docker Note
 
 ## Content
-- [Zigvy Git Workflow](#zigvy-git-workflow)
-  - [Content](#content)
-  - [Setup](#setup)
-  - [Straight Forward Workflow](#straight-forward-workflow)
-  - [Fork & Pull Request Workflow](#fork--pull-request-workflow)
-  - [Other scenario](#other-scenario)
+TBA
 
 ## Setup
 Head to [Docker installation guide](https://docs.docker.com/install/overview/) for more deail
@@ -73,9 +68,31 @@ docker [OPTION] run image_id/image_name
 # docker run --name docker-tut-con docker-tut -it -d
 ```
 
+### Docker compose
+- Run all services defined within the docker-compose.yml
+```
+docker-compose [OPTION] up
+
+# Useful option
+-d: detach
+--build: always build an image before start
+```
+
 ### More information
 - [docker image](https://docs.docker.com/engine/reference/commandline/container/)
 - [docker container](https://docs.docker.com/engine/reference/commandline/images/)
 - [docker run](https://docs.docker.com/engine/reference/commandline/run/)
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)
 - [docker-compose](https://docs.docker.com/compose/reference/)
+
+## Dockerfile
+```Dockerfile
+FROM alpine:latest # Select base image, always required
+WORKDIR /app # Create new working directory
+COPY . /app # Copy current directory to working directory
+RUN apk add py-pip # Run a command
+RUN make /app
+CMD python /app/app.py # Define a startup command
+```
+
+Reference: [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
