@@ -96,3 +96,21 @@ CMD python /app/app.py # Define a startup command
 ```
 
 Reference: [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
+
+## Docker compose file
+```yml
+version: "3.7" # Docker compose version for this file
+services: # Service defination
+  db: # service name
+    image: postgres:9.4 #service image, building service from direct image
+    volumes: # define volumn for this service
+      - db-data:/var/lib/postgresql/data
+
+  vote:
+    build: ./ # similar to image tag
+    ports: # map port to the host
+      - "5000:80"
+    depends_on: # tell compose that this service should be wait for db to be started
+      - db
+```
+Referece: [Compose file](https://docs.docker.com/compose/compose-file/)
